@@ -1,0 +1,13 @@
+{
+  "name": "fio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional da Fio (usefio.com.br): conversas que vendem.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

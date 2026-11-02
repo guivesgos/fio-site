@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usefio.com.br/sitemap.xml

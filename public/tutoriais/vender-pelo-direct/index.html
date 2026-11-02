@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vender pelo direct com o Mercado Pago · Fio</title>
+<meta name="description" content="Passo a passo para vender pelo direct do Instagram com a Fio e o Mercado Pago: aplicação, token, webhook, produto, botão de compra e teste.">
+<link rel="canonical" href="https://usefio.com.br/tutoriais/vender-pelo-direct/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fio">
+<meta property="og:title" content="Vender pelo direct com o Mercado Pago · Fio">
+<meta property="og:description" content="Passo a passo para vender pelo direct do Instagram com a Fio e o Mercado Pago: aplicação, token, webhook, produto, botão de compra e teste.">
+<meta property="og:url" content="https://usefio.com.br/tutoriais/vender-pelo-direct/">
+<meta property="og:image" content="https://usefio.com.br/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F3F5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="cursor" id="cursor" aria-hidden="true"><span>abrir</span></div>
+<div class="leitura" aria-hidden="true"></div>
+
+<header class="topo-site">
+  <div class="wrap topo">
+    <a class="marca" href="/" aria-label="Fio, página inicial"><svg viewBox="15 7 200 200" aria-hidden="true"><path d="M150 40 L 66 40 Q 36 40 36 70 L 36 118 Q 36 148 66 148 L 84 148 L 72 176 L 110 148 L 134 148 Q 164 148 164 118 L 164 84" fill="none" stroke="#161A2E" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M164 84 C 164 62, 174 46, 194 38" fill="none" stroke="#E0312B" stroke-width="15" stroke-linecap="round"/></svg><span>fio</span></a>
+    <nav class="nav" aria-label="Principal"><a href="/recursos/">Recursos</a><a href="/tutoriais/" aria-current="page">Tutoriais</a><a href="/contato/">Contato</a></nav>
+    <a class="btn btn-tinta btn-entrar" href="https://in.usefio.com.br/painel" data-mag>Entrar no painel</a>
+    <button class="btn btn-tinta menu-btn" type="button" popovertarget="menu">Menu</button>
+  </div>
+</header>
+
+<div id="menu" popover>
+  <button class="fechar" type="button" popovertarget="menu" popovertargetaction="hide">Fechar</button>
+  <nav aria-label="Menu"><a href="/">Início</a><a href="/recursos/">Recursos</a><a href="/tutoriais/" aria-current="page">Tutoriais</a><a href="/contato/">Contato</a></nav>
+  <div class="acoes"><a class="btn btn-fio" href="https://ig.me/m/fio.agencia">Falar com a Fio</a><a class="btn btn-linha" href="https://in.usefio.com.br/painel">Entrar no painel</a></div>
+</div>
+
+<main id="conteudo">
+
+  <section class="capa">
+    <div class="wrap">
+      <nav class="trilha" aria-label="Você está em"><a href="/tutoriais/">← Todos os tutoriais</a></nav>
+      <h1>Vender pelo <span class="recuo vazado">direct.</span></h1>
+      <p class="intro">Um botão de compra direto na conversa. A pessoa paga no Mercado Pago, com Pix ou cartão, e recebe o produto sozinha. Faça a configuração <b>pelo computador</b>: são telas grandes.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap tut">
+      <aside class="tut-indice">
+        <div><h2>NESTE TUTORIAL</h2><ol><li><a href="#antes">Antes de começar</a></li><li><a href="#aplicacao">Criar a aplicação</a></li><li><a href="#producao">Ativar produção</a></li><li><a href="#token">Conectar na Fio</a></li><li><a href="#webhook">Avisos (webhook)</a></li><li><a href="#produto">Cadastrar o produto</a></li><li><a href="#botao">Botão de compra</a></li><li><a href="#compra">Como o cliente compra</a></li><li><a href="#teste">Teste de R$ 1,00</a></li><li><a href="#duvidas">Dúvidas comuns</a></li></ol></div>
+        <div class="outros"><h2>OUTROS TUTORIAIS</h2><ul><li><a href="/tutoriais/conectar-instagram/">Como conectar o Instagram</a></li><li><a href="/tutoriais/automacao-de-comentario/">Automação de comentário</a></li><li><a href="/tutoriais/direct/">Direct no automático</a></li><li><a href="/tutoriais/pedir-contato-e-acompanhamento/">Pedir contato e acompanhar</a></li></ul></div>
+      </aside>
+      <div class="tut-corpo">
+        <article class="etapa" id="antes">
+          <div class="etapa-cab"><h2>Antes de começar</h2></div>
+<ul><li>Tenha uma conta no <b>Mercado Pago</b>. É nela que o dinheiro das vendas vai cair.</li><li>Tenha o produto pronto num link, por exemplo um arquivo no <b>Google Drive</b>.</li><li>O seu Instagram precisa estar conectado à Fio (<a href="/tutoriais/conectar-instagram/">veja como</a>).</li></ul>
+        </article>
+        <article class="etapa" id="aplicacao">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">1</span><h2><span class="pular-leitor">Passo 1. </span>Crie a aplicação no Mercado Pago</h2></div>
+<ol><li>Acesse <a href="https://www.mercadopago.com.br/developers">mercadopago.com.br/developers</a> e entre com a sua conta do Mercado Pago.</li><li>Clique em <b>Suas integrações</b> e depois em <b>Criar aplicação</b>.</li><li>Dê um nome. Ex.: <i>Fio · suamarca</i>.</li><li>Quando perguntar o tipo de solução, escolha <b>Checkout Pro</b>.</li><li>Em <b>Tipo de API</b>, escolha <b>API de Orders</b>.</li><li>Confirme e crie a aplicação.</li></ol><div class="caixa atencao"><span class="rot">ATENÇÃO</span><p>Não escolha <b>Preferências</b> em Tipo de API: essa opção será descontinuada pelo Mercado Pago. Use <b>API de Orders</b>.</p></div>
+        </article>
+        <article class="etapa" id="producao">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">2</span><h2><span class="pular-leitor">Passo 2. </span>Ative o ambiente de produção</h2></div>
+<p>Produção é o modo de verdade, com dinheiro de verdade.</p><ol><li>Dentro da aplicação, abra a aba <b>Produção</b>.</li><li>Clique em <b>Ativar ambiente de produção</b>.</li><li>Escolha o seu <b>setor de atuação</b>.</li><li>Informe o <b>site</b>. Pode ser o endereço do seu site ou do seu Instagram (ex.: https://instagram.com/suamarca).</li><li>Aceite os termos e confirme.</li></ol>
+        </article>
+        <article class="etapa" id="token">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">3</span><h2><span class="pular-leitor">Passo 3. </span>Conecte o Mercado Pago na Fio</h2></div>
+<ol><li>Ainda na aplicação, abra <b>Credenciais de produção</b>.</li><li>Copie o <b>Access Token</b>. Ele começa com <b>APP_USR-</b>.</li><li>Em outra aba, entre no painel da Fio (<a href="https://in.usefio.com.br/painel">in.usefio.com.br/painel</a>).</li><li>No menu, clique em <b>Vendas</b>. No quadro <b>Mercado Pago</b>, cole o token em <b>Access Token de produção</b>.</li><li>Clique em <b>Conectar</b>. O quadro muda para <b>Conectado</b>.</li></ol><div class="caixa atencao"><span class="rot">ATENÇÃO</span><p><b>Nunca mande o Access Token para ninguém</b>: nem por direct, nem por e-mail, nem para a equipe da Fio. Ele dá acesso à sua conta do Mercado Pago. Cole só no painel da Fio, onde ele fica guardado e nunca é mostrado de novo.</p><p>Se acha que alguém viu o seu token, renove as credenciais no Mercado Pago e conecte de novo na Fio.</p></div><figure><div class="ui"><div class="ui-linha" style="justify-content:space-between"><span class="ui-tit">Mercado Pago</span><span class="selo">Não conectado</span></div><div class="ui-sub">A conta que recebe os pagamentos deste perfil.</div><div class="ui-campo">Access Token de produção<div class="ui-input vazio">APP_USR-...</div></div><div class="ui-btn ui-marca">Conectar</div></div><figcaption>Recorte do painel, em Vendas.</figcaption></figure>
+        </article>
+        <article class="etapa" id="webhook">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">4</span><h2><span class="pular-leitor">Passo 4. </span>Configure os avisos de pagamento (webhook)</h2></div>
+<p>É por esse endereço que o Mercado Pago avisa a Fio quando um pagamento é aprovado. Assim a entrega sai na hora.</p><ol><li>No painel da Fio, em <b>Vendas</b>, no quadro <b>Mercado Pago</b>, encontre <b>Endereço de avisos (webhook)</b> e clique em <b>Copiar</b>.</li><li>No Mercado Pago (<a href="https://www.mercadopago.com.br/developers">mercadopago.com.br/developers</a>), abra <b>Suas integrações</b> → a sua aplicação → <b>Configuração de webhooks</b>.</li><li>Escolha <b>Modo produção</b> e cole o endereço.</li><li>Em eventos, marque <b>Order (Mercado Pago)</b> e <b>Pagamentos (legacy)</b>.</li><li>Salve.</li></ol><figure><div class="ui"><div class="ui-linha" style="justify-content:space-between"><span class="ui-tit">Mercado Pago</span><span class="selo ok">Conectado</span></div><div class="ui-campo">Endereço de avisos (webhook)<div class="ui-linha"><div class="ui-input" style="flex:1">https://in.usefio.com.br/…</div><div class="ui-btn sec ui-marca">Copiar</div></div></div></div><figcaption>O endereço aparece depois de conectar.</figcaption></figure>
+        </article>
+        <article class="etapa" id="produto">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">5</span><h2><span class="pular-leitor">Passo 5. </span>Cadastre o produto</h2></div>
+<p>Primeiro, prepare o link de entrega no Google Drive:</p><ol><li>No Google Drive, clique com o botão direito no arquivo (ou na pasta) e escolha <b>Compartilhar</b>.</li><li>Em <b>Acesso geral</b>, escolha <b>Qualquer pessoa com o link</b>, como <b>Leitor</b>.</li><li>Clique em <b>Copiar link</b>.</li></ol><p>Agora, no painel da Fio:</p><ol><li>Em <b>Vendas</b>, clique em <b>Novo produto</b>.</li><li>Preencha o <b>Nome</b> (ex.: <i>Kit Ritmo em Cores</i>) e o <b>Preço (R$)</b>.</li><li>Em <b>Link de entrega</b>, cole o link do Google Drive.</li><li>Confira a <b>Mensagem do e-mail</b>. Ela vai junto com o produto.</li><li>Deixe <b>À venda</b> marcado e clique em <b>Salvar produto</b>.</li></ol><div class="caixa atencao"><span class="rot">ATENÇÃO</span><p>Se o arquivo não estiver como <b>"Qualquer pessoa com o link pode ver"</b>, o cliente paga e não consegue abrir. Teste o link numa aba anônima antes.</p></div><figure><div class="ui"><div class="ui-tit">Novo produto</div><div class="ui-campo">Nome<div class="ui-input">Kit Ritmo em Cores</div></div><div class="ui-campo">Preço (R$)<div class="ui-input">47,00</div></div><div class="ui-campo">Link de entrega<div class="ui-input">https://drive.google.com/…</div></div><div class="ui-campo">Mensagem do e-mail<div class="ui-input">Obrigado pela compra, {nome}! O seu produto está no botão abaixo. Guarde este e-mail para acessar quando quiser.</div></div><div class="ui-check"><i class="on"></i>À venda</div><div class="ui-btn">Salvar produto</div></div></figure><div class="caixa"><span class="rot dica">DICA</span><p>No quadro <b>Entrega por e-mail</b>, em <b>Quando o cliente responder o e-mail, vai para</b>, coloque o seu e-mail. Assim, se o cliente responder, a mensagem chega para você.</p></div>
+        </article>
+        <article class="etapa" id="botao">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">6</span><h2><span class="pular-leitor">Passo 6. </span>Coloque o botão de compra</h2></div>
+<ol><li>Abra a automação que vai vender (ou a resposta padrão, ou qualquer mensagem com botões).</li><li>Adicione um botão e escreva o <b>Texto do botão</b>. Ex.: <i>Comprar o kit</i>.</li><li>Em <b>Ao tocar</b>, escolha <b>Vender um produto</b>.</li><li>Em <b>Produto</b>, escolha o produto que você cadastrou.</li><li>Salve.</li></ol><figure><div class="ui"><div class="ui-campo">Texto do botão<div class="ui-input">Comprar o kit</div></div><div class="ui-campo">Ao tocar<div class="ui-input">Vender um produto</div></div><div class="ui-campo">Produto<div class="ui-input">Kit Ritmo em Cores · R$ 47,00</div></div></div><figcaption>O botão abre o pagamento do Mercado Pago.</figcaption></figure>
+        </article>
+        <article class="etapa" id="compra">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">7</span><h2><span class="pular-leitor">Passo 7. </span>Como o cliente compra</h2></div>
+<ol><li>Toca no botão na conversa.</li><li>Abre uma página da Fio, onde informa <b>Seu nome</b> e <b>Seu e-mail</b> e toca em <b>Ir para o pagamento</b>.</li><li>Paga no Mercado Pago, com <b>Pix ou cartão</b>.</li><li>Recebe o produto <b>por e-mail</b>, na página <b>Compra aprovada</b> e <b>pelo direct</b>.</li></ol><p>O dinheiro cai na sua conta do Mercado Pago. A Fio não vê nem guarda dados de cartão. A venda aparece no painel, em <b>Vendas</b>.</p><figure><div class="mini" style="justify-self:start;rotate:0deg"><div class="tela-cab"><div class="av"><svg viewBox="15 7 200 200" aria-hidden="true"><path d="M150 40 L 66 40 Q 36 40 36 70 L 36 118 Q 36 148 66 148 L 84 148 L 72 176 L 110 148 L 134 148 Q 164 148 164 118 L 164 84" fill="none" stroke="#F2F3F5" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M164 84 C 164 62, 174 46, 194 38" fill="none" stroke="#E0312B" stroke-width="15" stroke-linecap="round"/></svg></div>suamarca</div><div class="m fio">O Kit Ritmo em Cores sai por R$ 47,00.<span class="bt pago">Comprar o kit</span></div><div class="etq">Pagou com Pix no Mercado Pago</div><div class="m fio">Pagamento aprovado! Enviei o kit para o seu e-mail.<span class="bt">Abrir o kit</span></div></div></figure>
+        </article>
+        <article class="etapa" id="teste">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">8</span><h2><span class="pular-leitor">Passo 8. </span>Faça um teste de R$ 1,00</h2></div>
+<p>Antes de anunciar, teste tudo com dinheiro de verdade, mas pouco.</p><ol><li>Cadastre um produto de teste com preço <b>R$ 1,00</b> e coloque o botão numa automação.</li><li>Pague usando <b>outra conta</b> (de outra pessoa ou outro perfil seu). O Mercado Pago não deixa você pagar a si mesmo.</li><li>Confira: a venda aparece como <b>Aprovada</b> em Vendas, o e-mail chegou e o link abre.</li><li>Devolva o dinheiro: no Mercado Pago, abra o pagamento e use a opção de <b>devolver o dinheiro</b>. Na Fio, a venda passa a aparecer como <b>Reembolsada</b>.</li><li>Desmarque <b>À venda</b> no produto de teste.</li></ol>
+        </article>
+        <article class="etapa" id="duvidas">
+          <div class="etapa-cab"><h2>Dúvidas comuns</h2></div>
+<div>
+      <details name="mp"><summary>O cliente não achou o e-mail</summary><div><p>Peça para ele procurar nas pastas <b>Spam</b>, <b>Lixo eletrônico</b> ou <b>Promoções</b>. Se estiver lá, ele deve abrir o e-mail e marcar <b>"Não é spam"</b>. Assim os próximos chegam na caixa de entrada.</p><p>O produto também fica na página <b>Compra aprovada</b>, que abre logo depois do pagamento.</p></div></details>
+      <details name="mp"><summary>O cliente digitou o e-mail errado</summary><p>No painel, em <b>Vendas</b>, encontre a venda e use <b>Trocar e-mail e reenviar</b>. Escreva o e-mail certo e a Fio envia o produto de novo.</p></details>
+      <details name="mp"><summary>A venda está "Aguardando pagamento"</summary><p>Em geral, a pessoa gerou o Pix mas ainda não pagou. Não precisa fazer nada: se ela pagar, a venda muda para Aprovada e a entrega sai sozinha. Se não pagar, fica assim.</p></details>
+      <details name="mp"><summary>A venda está "Não aprovada"</summary><p>O pagamento foi recusado e nenhum valor foi cobrado. A pessoa pode tentar de novo pelo botão da conversa, com outra forma de pagamento.</p></details>
+    </div>
+        </article>
+        <div class="tut-fim"><h2>Travou em algum passo?</h2><p>Mande um print da tela no direct da @fio.agencia. A gente responde e te ajuda a terminar.</p><div class="acoes"><a class="btn btn-fio" href="https://ig.me/m/fio.agencia">Pedir ajuda no direct</a></div></div>
+        <nav class="tut-prox" aria-label="Outros tutoriais">
+          <a href="/tutoriais/pedir-contato-e-acompanhamento/"><small>← Anterior</small><span>Pedir contato e acompanhar</span></a>
+          <a class="prox" href="/tutoriais/"><small>Ver todos →</small><span>Central de ajuda</span></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod">
+      <div><h2>Site</h2><ul><li><a href="/">Início</a></li><li><a href="/recursos/">Recursos</a></li><li><a href="/tutoriais/">Tutoriais</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+      <div><h2>Contato</h2><ul><li><a href="mailto:contato@usefio.com.br">contato@usefio.com.br</a></li><li><a href="https://instagram.com/fio.agencia">@fio.agencia</a></li><li><a href="https://in.usefio.com.br/painel">Entrar no painel</a></li></ul></div>
+      <div><h2>Legal</h2><ul><li><a href="https://in.usefio.com.br/privacidade">Política de Privacidade</a></li><li><a href="https://in.usefio.com.br/exclusao-de-dados">Exclusão de dados</a></li></ul></div>
+      <div><h2>© 2026 Fio</h2><ul><li>conversas que vendem</li></ul></div>
+    </div>
+    <div class="gigante" aria-hidden="true"><span>f</span><span>i</span><span>o</span><span>.</span></div>
+  </div>
+</footer>
+</body>
+</html>
