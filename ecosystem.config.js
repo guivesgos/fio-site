@@ -5,7 +5,7 @@ module.exports = {
     {
       name: 'fio-site',
       script: 'server.js',
-      env: { PORT: 3002 },
+      env: { PORT: 3010 },
       max_memory_restart: '150M',
     },
   ],

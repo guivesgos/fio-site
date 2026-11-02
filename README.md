@@ -17,7 +17,7 @@ public/
   assets/site.css                 Visual de todas as páginas
   assets/site.js                  Interações (cursor, menu, demonstração)
   assets/img/                     Imagens
-server.js                         Servidor (porta 3002)
+server.js                         Servidor (porta 3010)
 ecosystem.config.js               Configuração do PM2
 ```
 
@@ -31,11 +31,11 @@ Precisa do Node.js 18 ou mais novo.
 node server.js
 ```
 
-Abra http://localhost:3002.
+Abra http://localhost:3010.
 
 ## Na VPS
 
-O site roda com o PM2, no processo `fio-site`, na porta 3002. O Caddy (no Docker do projeto `/opt/whatsapp-escritorio`) recebe o HTTPS de `usefio.com.br` e repassa para essa porta. O firewall bloqueia o acesso externo às portas 3001–3099.
+O site roda com o PM2, no processo `fio-site`, na porta 3010. O Caddy (no Docker do projeto `/opt/whatsapp-escritorio`) recebe o HTTPS de `usefio.com.br` e repassa para essa porta. O firewall bloqueia o acesso externo às portas 3001–3099.
 
 Primeira instalação:
 
@@ -55,4 +55,4 @@ git pull
 pm2 restart fio-site
 ```
 
-Conferir se está no ar: `curl http://127.0.0.1:3002/saude` deve responder `ok`.
+Conferir se está no ar: `curl http://127.0.0.1:3010/saude` deve responder `ok`.

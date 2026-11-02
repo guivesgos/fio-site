@@ -8,7 +8,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 
-const PORTA = Number(process.env.PORT) || 3002;
+const PORTA = Number(process.env.PORT) || 3010;
 const HOST = process.env.HOST || '0.0.0.0'; // o Caddy (no Docker) chega por host.docker.internal; o firewall bloqueia acesso externo
 const RAIZ = path.join(__dirname, 'public');
 
