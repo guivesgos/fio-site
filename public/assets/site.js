@@ -44,22 +44,22 @@
     var cenas = {
       comentario: cab +
         '<div class="etq">No post</div>' +
-        '<div class="post"><div class="av cli"></div><div><b>ana.musica</b> quero! <span class="chave">GUIA</span></div></div>' +
-        '<div class="post resp"><div class="av">' + logo + '</div><div><b>suamarca</b> Te mandei no direct, Ana!</div></div>' +
+        '<div class="post"><div class="av cli"></div><div><b>marina.lima</b> quero! <span class="chave">GUIA</span></div></div>' +
+        '<div class="post resp"><div class="av">' + logo + '</div><div><b>suamarca</b> Te mandei no direct, Marina!</div></div>' +
         '<div class="etq">No direct</div>' +
-        '<div class="m fio">Oi, Ana! Aqui está o seu guia gratuito.<span class="bt">Receber o guia</span></div>',
+        '<div class="m fio">Oi, Marina! Aqui está o seu guia gratuito.<span class="bt">Receber o guia</span></div>',
       story: cab +
-        '<div class="etq">ana.musica mencionou você no story</div>' +
+        '<div class="etq">marina.lima mencionou você no story</div>' +
         '<div class="m fio">Que alegria ver você me marcando! Separei um presente pra você.<span class="bt">Abrir presente</span></div>' +
         '<div class="m ela">ahh obrigada!!</div>',
       direct: cab +
         '<div class="etq">Primeira conversa</div>' +
-        '<div class="m fio">Oi! Como posso te ajudar?<span class="bt">Quero saber os valores</span><span class="bt">Como funciona a consulta?</span></div>' +
+        '<div class="m fio">Oi! Como posso te ajudar?<span class="bt">Quero saber os valores</span><span class="bt">Como funciona o atendimento?</span></div>' +
         '<div class="m ela">Quero saber os valores</div>' +
         '<div class="m fio">Claro! Antes, me conta seu melhor e-mail que eu te mando a tabela completa.</div>' +
-        '<div class="m ela">ana@email.com</div>',
+        '<div class="m ela">marina@email.com</div>',
       venda: cab +
-        '<div class="m fio">O Guia Completo sai por R$ 47,00. É só tocar aqui embaixo.<span class="bt pago">Comprar · R$ 47,00</span></div>' +
+        '<div class="m fio">O Guia Prático sai por R$ 47,00. É só tocar aqui embaixo.<span class="bt pago">Comprar · R$ 47,00</span></div>' +
         '<div class="etq">Pagou com Pix no Mercado Pago</div>' +
         '<div class="m fio">Pagamento aprovado! Enviei o guia para o seu e-mail.<span class="bt">Abrir o guia</span></div>'
     };
