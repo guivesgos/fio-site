@@ -21,7 +21,7 @@ server.js                         Servidor (porta 3002)
 ecosystem.config.js               Configuração do PM2
 ```
 
-Para mudar um texto, edite o `index.html` da página. O cabeçalho e o rodapé se repetem em cada página: uma mudança neles precisa ser feita em todos os arquivos.
+Para mudar um texto, edite o `index.html` da página. Ao mudar o `site.css` ou o `site.js`, aumente o número em `?v=` nos links dessas páginas (ex.: `?v=2` para `?v=3`), para os navegadores baixarem a versão nova. O cabeçalho e o rodapé se repetem em cada página: uma mudança neles precisa ser feita em todos os arquivos.
 
 ## Rodar no computador
 
