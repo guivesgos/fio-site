@@ -236,6 +236,7 @@ footer.rodape{background:var(--tinta);color:var(--papel-2);padding-block:56px 0;
 .gigante span{display:inline-block;transition:translate .35s cubic-bezier(.3,1.8,.5,1),color .2s}
 .gigante span:hover{translate:0 -.12em;color:var(--fio)}
 .gigante span:last-child{color:var(--fio)}
+.gigante span:first-child{margin-right:.04em} /* afasta o traço do f do i */
 
 /* ---------- Páginas internas: capa ---------- */
 .capa{padding-block:56px 72px}
