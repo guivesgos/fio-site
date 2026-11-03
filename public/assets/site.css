@@ -88,10 +88,10 @@ header.topo-site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;bac
 
 /* ---------- Início: hero ---------- */
 .hero{padding-block:48px 72px}
-.hero h1{font-size:clamp(54px,11.5vw,168px);position:relative}
+.hero h1{font-size:clamp(40px,11.5vw,168px);position:relative}
 .hero h1 .l{display:block}
 .hero h1 .l2{padding-left:9vw;display:flex;align-items:baseline;gap:.25em;flex-wrap:wrap}
-.troca{display:inline-grid;height:1em;overflow:hidden;vertical-align:bottom;line-height:1}
+.troca{display:inline-grid;height:1.2em;overflow:hidden;vertical-align:bottom;line-height:1.2;margin-block:-.1em}
 .troca span{grid-area:1/1;animation:troca 10s cubic-bezier(.7,0,.2,1) infinite;transform:translateY(110%)}
 .troca span:nth-child(1){animation-delay:0s}.troca span:nth-child(2){animation-delay:2.5s}
 .troca span:nth-child(3){animation-delay:5s}.troca span:nth-child(4){animation-delay:7.5s}
@@ -101,9 +101,9 @@ header.topo-site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;bac
 .hero-baixo p{font-size:clamp(18px,1.6vw,21px);max-width:31em;color:var(--nevoa)}
 .hero-baixo p b{color:var(--tinta)}
 .adesivo{position:absolute;z-index:3;font:700 15px var(--f-texto);padding:10px 16px;border-radius:20px;background:var(--branco);border:1px solid var(--linha);box-shadow:0 18px 30px -18px rgba(22,26,46,.35);animation:flutua 6s ease-in-out infinite;letter-spacing:0}
-.adesivo.a1{top:4%;right:6%;rotate:8deg;border-bottom-right-radius:6px}
-.adesivo.a2{top:44%;right:16%;rotate:-6deg;background:var(--tinta);color:var(--papel);border-color:var(--tinta);border-bottom-left-radius:6px;animation-delay:-2s}
-.adesivo.a3{top:30%;left:58%;rotate:3deg;font-family:var(--f-titulo);font-weight:600;font-size:13px;background:var(--fio);color:var(--branco);border-color:var(--fio);animation-delay:-4s}
+.adesivo.a1{top:-9%;right:0;rotate:8deg;border-bottom-right-radius:6px}
+.adesivo.a2{top:47%;right:8%;rotate:-6deg;background:var(--tinta);color:var(--papel);border-color:var(--tinta);border-bottom-left-radius:6px;animation-delay:-2s}
+.adesivo.a3{top:38%;left:46%;rotate:3deg;font-family:var(--f-titulo);font-weight:600;font-size:13px;background:var(--fio);color:var(--branco);border-color:var(--fio);animation-delay:-4s}
 @keyframes flutua{50%{translate:0 -12px}}
 @supports (animation-timeline: scroll()){
   .hero .paralaxe{animation:sobe linear both;animation-timeline:scroll(root);animation-range:0 600px}
@@ -374,6 +374,7 @@ figcaption{font-size:14px;color:var(--nevoa)}
   .passo:nth-child(n){grid-column:auto;margin-top:0}
   .passo:nth-child(2){padding-left:12vw}.passo:nth-child(3){padding-left:24vw}
   .adesivo.a3{display:none}
+  .adesivo.a2{top:40%}
   .tut{grid-template-columns:1fr;gap:8px}
   .tut-indice{position:static}
   .tut-indice .outros{display:none}
@@ -384,7 +385,11 @@ figcaption{font-size:14px;color:var(--nevoa)}
   body{font-size:16px}
   .vazado{--e:1.5px}
   .adesivo{font-size:13px;padding:8px 12px}
-  .adesivo.a1{top:-6%;right:2%}.adesivo.a2{top:auto;bottom:-14%;right:4%}
+  /* No celular os balões saem de cima do título e viram uma fileira logo abaixo dele */
+  .hero .paralaxe{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
+  .hero h1{flex:1 0 100%;margin-bottom:10px}
+  .adesivo,.adesivo.a1,.adesivo.a2{position:static}
+  .adesivo.a1{order:1}.adesivo.a2{order:2}
   .acoes .btn{flex:1 1 100%}
   .tela{min-height:480px}
   .demo,.final{border-radius:28px 28px 0 0}
