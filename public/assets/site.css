@@ -101,8 +101,8 @@ header.topo-site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;bac
 .hero-baixo p{font-size:clamp(18px,1.6vw,21px);max-width:31em;color:var(--nevoa)}
 .hero-baixo p b{color:var(--tinta)}
 .adesivo{position:absolute;z-index:3;font:700 15px var(--f-texto);padding:10px 16px;border-radius:20px;background:var(--branco);border:1px solid var(--linha);box-shadow:0 18px 30px -18px rgba(22,26,46,.35);animation:flutua 6s ease-in-out infinite;letter-spacing:0}
-.adesivo.a1{top:-9%;right:0;rotate:8deg;border-bottom-right-radius:6px}
-.adesivo.a2{top:47%;right:8%;rotate:-6deg;background:var(--tinta);color:var(--papel);border-color:var(--tinta);border-bottom-left-radius:6px;animation-delay:-2s}
+.adesivo.a1{top:0;right:12%;rotate:8deg;border-bottom-right-radius:6px}
+.adesivo.a2{top:45%;right:22%;rotate:-6deg;background:var(--tinta);color:var(--papel);border-color:var(--tinta);border-bottom-left-radius:6px;animation-delay:-2s}
 .adesivo.a3{top:38%;left:46%;rotate:3deg;font-family:var(--f-titulo);font-weight:600;font-size:13px;background:var(--fio);color:var(--branco);border-color:var(--fio);animation-delay:-4s}
 @keyframes flutua{50%{translate:0 -12px}}
 @supports (animation-timeline: scroll()){
@@ -385,11 +385,8 @@ figcaption{font-size:14px;color:var(--nevoa)}
   body{font-size:16px}
   .vazado{--e:1.5px}
   .adesivo{font-size:13px;padding:8px 12px}
-  /* No celular os balões saem de cima do título e viram uma fileira logo abaixo dele */
-  .hero .paralaxe{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
-  .hero h1{flex:1 0 100%;margin-bottom:10px}
-  .adesivo,.adesivo.a1,.adesivo.a2{position:static}
-  .adesivo.a1{order:1}.adesivo.a2{order:2}
+  /* No celular: balões colados no título, no espaço livre (acima de "conversas" e ao lado do "que") */
+  .adesivo.a1{top:-13%;right:0}.adesivo.a2{top:38%;right:0;bottom:auto}
   .acoes .btn{flex:1 1 100%}
   .tela{min-height:480px}
   .demo,.final{border-radius:28px 28px 0 0}
