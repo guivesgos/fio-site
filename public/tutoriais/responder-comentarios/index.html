@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Responder quem comentou · Fio</title>
+<meta name="description" content="Como responder em lote os comentários de um post com a Fio: escolher o post, marcar comentários, variações de resposta e acompanhar a fila.">
+<link rel="canonical" href="https://usefio.com.br/tutoriais/responder-comentarios/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fio">
+<meta property="og:title" content="Responder quem comentou · Fio">
+<meta property="og:description" content="Como responder em lote os comentários de um post com a Fio: escolher o post, marcar comentários, variações de resposta e acompanhar a fila.">
+<meta property="og:url" content="https://usefio.com.br/tutoriais/responder-comentarios/">
+<meta property="og:image" content="https://usefio.com.br/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F3F5">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=7">
+<script src="/assets/site.js?v=7" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="cursor" id="cursor" aria-hidden="true"><span>abrir</span></div>
+<div class="leitura" aria-hidden="true"></div>
+
+<header class="topo-site">
+  <div class="wrap topo">
+    <a class="marca" href="/" aria-label="Fio, página inicial"><svg viewBox="15 7 200 200" aria-hidden="true"><path d="M150 40 L 66 40 Q 36 40 36 70 L 36 118 Q 36 148 66 148 L 84 148 L 72 176 L 110 148 L 134 148 Q 164 148 164 118 L 164 84" fill="none" stroke="#161A2E" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M164 84 C 164 62, 174 46, 194 38" fill="none" stroke="#E0312B" stroke-width="15" stroke-linecap="round"/></svg><span>fio</span></a>
+    <nav class="nav" aria-label="Principal"><a href="/recursos/">Recursos</a><a href="/tutoriais/" aria-current="page">Tutoriais</a><a href="/contato/">Contato</a></nav>
+    <a class="btn btn-tinta btn-entrar" href="https://in.usefio.com.br/painel" data-mag>Entrar no painel</a>
+    <button class="btn btn-tinta menu-btn" type="button" popovertarget="menu">Menu</button>
+  </div>
+</header>
+
+<div id="menu" popover>
+  <button class="fechar" type="button" popovertarget="menu" popovertargetaction="hide">Fechar</button>
+  <nav aria-label="Menu"><a href="/">Início</a><a href="/recursos/">Recursos</a><a href="/tutoriais/" aria-current="page">Tutoriais</a><a href="/contato/">Contato</a></nav>
+  <div class="acoes"><a class="btn btn-fio" href="https://ig.me/m/fio.agencia">Falar com a Fio</a><a class="btn btn-linha" href="https://in.usefio.com.br/painel">Entrar no painel</a></div>
+</div>
+
+<main id="conteudo">
+
+  <section class="capa">
+    <div class="wrap">
+      <nav class="trilha" aria-label="Você está em"><a href="/tutoriais/">← Todos os tutoriais</a></nav>
+      <h1>Responder quem <span class="recuo vazado">comentou.</span></h1>
+      <p class="intro">Escolha um post e a Fio responde, aos poucos, os comentários que ainda não têm resposta sua. Quem comentou recebe a notificação <b>“respondeu ao seu comentário”</b>: um jeito de lembrar quem interagiu com você.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap tut">
+      <aside class="tut-indice">
+        <div><h2>NESTE TUTORIAL</h2><ol><li><a href="#porque">Por que responder e não curtir</a></li><li><a href="#post">Escolha o post</a></li><li><a href="#marcar">Marque os comentários</a></li><li><a href="#respostas">Escreva as respostas e envie</a></li><li><a href="#fila">Acompanhe (ou cancele)</a></li></ol></div>
+        <div class="outros"><h2>OUTROS TUTORIAIS</h2><ul><li><a href="/tutoriais/conectar-instagram/">Como conectar o Instagram</a></li><li><a href="/tutoriais/automacao-de-comentario/">Automação de comentário</a></li><li><a href="/tutoriais/direct/">Direct no automático</a></li><li><a href="/tutoriais/pedir-contato-e-acompanhamento/">Pedir contato e acompanhar</a></li><li><a href="/tutoriais/siga-para-receber/">Siga para receber</a></li><li><a href="/tutoriais/teste-ab/">Teste A/B da mensagem</a></li><li><a href="/tutoriais/moderacao/">Moderação de comentários</a></li><li><a href="/tutoriais/vender-pelo-direct/">Vender pelo direct com o Mercado Pago</a></li><li><a href="/tutoriais/metricas/">Métricas e vendas por post</a></li><li><a href="/tutoriais/melhor-horario/">Melhor horário para postar</a></li><li><a href="/tutoriais/relatorio-semanal/">Relatório semanal por e-mail</a></li></ul></div>
+      </aside>
+      <div class="tut-corpo">
+        <article class="etapa" id="porque">
+          <div class="etapa-cab"><h2>Por que responder e não curtir</h2></div>
+<p>O Instagram não deixa nenhuma ferramenta oficial curtir comentários: quem faz isso usa a sua senha e arrisca bloquear a conta. A resposta é permitida e chama ainda mais atenção que a curtida, porque a pessoa recebe a notificação e vê a sua mensagem.</p>
+        </article>
+        <article class="etapa" id="post">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">1</span><h2><span class="pular-leitor">Passo 1. </span>Escolha o post</h2></div>
+<ol><li>No menu, clique em <b>Automações</b>.</li><li>No quadro <b>Responder quem comentou</b>, clique em <b>Escolher post</b>.</li><li>Toque no post. Uma boa hora: logo depois de publicar um post novo, responda os comentários do anterior.</li></ol>
+        </article>
+        <article class="etapa" id="marcar">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">2</span><h2><span class="pular-leitor">Passo 2. </span>Marque os comentários</h2></div>
+<p>A Fio mostra os comentários de outras pessoas no post (os seus ficam de fora):</p><ul><li>Quem <b>ainda não tem resposta sua</b> já vem marcado.</li><li>Quem você <b>já respondeu</b> aparece com o selo <b>Já respondido</b> e começa desmarcado.</li><li>Use <b>Marcar os sem resposta</b> ou <b>Desmarcar todos</b> para ajustar.</li></ul>
+<figure><div class="ui"><div class="ui-tit">Comentários</div><div class="ui-check"><i class="on"></i><span>@marina.lima Amei esse vídeo!</span></div><div class="ui-check"><i></i><span>@joao.pedro Que lindo 😍<small>Já respondido</small></span></div><div class="ui-check"><i class="on"></i><span>@carla.dias Quero mais conteúdos assim</span></div></div></figure>
+        </article>
+        <article class="etapa" id="respostas">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">3</span><h2><span class="pular-leitor">Passo 3. </span>Escreva as respostas e envie</h2></div>
+<ol><li>Em <b>Respostas</b>, deixe ou mude as variações (a Fio sorteia uma para cada comentário). Use <b>{nome}</b> para o primeiro nome da pessoa.</li><li>Clique no botão vermelho <b>Responder N comentários</b> e confirme.</li></ol>
+<div class="caixa atencao"><span class="rot">ATENÇÃO</span><p>A Fio responde <b>um comentário a cada 1 a 2 minutos</b>, para o Instagram não tratar como spam. 30 comentários levam cerca de 40 minutos. Pode fechar o painel: a Fio continua sozinha, mesmo se a VPS reiniciar.</p></div>
+        </article>
+        <article class="etapa" id="fila">
+          <div class="etapa-cab"><span class="n vazado" aria-hidden="true">4</span><h2><span class="pular-leitor">Passo 4. </span>Acompanhe (ou cancele)</h2></div>
+<p>No topo da tela aparecem quantos já foram respondidos, quantos estão na fila e a hora em que termina. O botão <b>Cancelar o que falta</b> para o envio na hora. Um mesmo comentário nunca entra duas vezes na fila.</p>
+<figure><div class="ui"><div class="ui-tit">Respondendo…</div><div class="ui-tabela"><div><span>Respondidos</span><b>12</b></div><div><span>Na fila</span><b>18</b></div><div><span>Termina por volta de</span><b>19:40</b></div></div><div class="ui-btn sec">Cancelar o que falta</div></div></figure>
+        </article>
+        <div class="tut-fim"><h2>Travou em algum passo?</h2><p>Mande um print da tela no direct da @fio.agencia. A gente responde e te ajuda a terminar.</p><div class="acoes"><a class="btn btn-fio" href="https://ig.me/m/fio.agencia">Pedir ajuda no direct</a></div></div>
+        <nav class="tut-prox" aria-label="Outros tutoriais">
+          <a href="/tutoriais/moderacao/"><small>← Anterior</small><span>Moderação de comentários</span></a>
+          <a class="prox" href="/tutoriais/vender-pelo-direct/"><small>Próximo →</small><span>Vender pelo direct com o Mercado Pago</span></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod">
+      <div><h2>Site</h2><ul><li><a href="/">Início</a></li><li><a href="/recursos/">Recursos</a></li><li><a href="/tutoriais/">Tutoriais</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+      <div><h2>Contato</h2><ul><li><a href="mailto:contato@usefio.com.br">contato@usefio.com.br</a></li><li><a href="https://instagram.com/fio.agencia">@fio.agencia</a></li><li><a href="https://in.usefio.com.br/painel">Entrar no painel</a></li></ul></div>
+      <div><h2>Legal</h2><ul><li><a href="https://in.usefio.com.br/privacidade">Política de Privacidade</a></li><li><a href="https://in.usefio.com.br/exclusao-de-dados">Exclusão de dados</a></li></ul></div>
+      <div><h2>© 2026 Fio</h2><ul><li>conversas que vendem</li></ul></div>
+    </div>
+    <div class="gigante" aria-hidden="true"><span>f</span><span>i</span><span>o</span><span>.</span></div>
+  </div>
+</footer>
+</body>
+</html>

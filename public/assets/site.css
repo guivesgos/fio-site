@@ -443,3 +443,19 @@ figcaption{font-size:14px;color:var(--nevoa)}
   .comp tbody th[scope="row"],.comp thead th:first-child{width:138px;min-width:138px;max-width:138px;font-size:14px;box-shadow:6px 0 8px -6px rgba(22,26,46,.18)}
   .comp td,.comp thead th:not(:first-child){min-width:120px}
 }
+
+/* ---------- Central de ajuda: grupos e "onde fica cada coisa" ---------- */
+.grupo-tut{font:700 13px var(--f-texto);letter-spacing:.06em;text-transform:uppercase;color:var(--nevoa);margin:56px 0 4px}
+.tutoriais-lista .grupo-tut:first-child{margin-top:0}
+.tutoriais-lista{padding-bottom:72px}
+.mapa-painel{padding-block:24px 110px}
+.mapa-painel h2{font-size:clamp(32px,5.4vw,72px)}
+.mapa-sub{color:var(--nevoa);font-size:18px;margin:16px 0 28px;max-width:32em}
+.mapa-tabela th,.mapa-tabela td{text-align:left;vertical-align:top}
+.mapa-tabela tbody th[scope="row"]{width:180px;font-family:var(--f-titulo);font-weight:600;letter-spacing:-.02em}
+.mapa-tabela td{color:#3A3F55;font-size:15px}
+.mapa-tabela td a{font-weight:700;text-decoration-color:var(--fio);text-decoration-thickness:2px;text-underline-offset:3px;line-height:1.7}
+@media (max-width:700px){
+  .mapa-tabela{min-width:560px}
+  .mapa-tabela tbody th[scope="row"]{width:120px;min-width:120px}
+}
