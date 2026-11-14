@@ -105,7 +105,34 @@ function erro(res) {
   res.end('Erro no servidor');
 }
 
+// Link na bio (usefio.com.br/@perfil): quem monta a página é o painel da Fio, que tem os
+// dados do perfil. O site só repassa o pedido para ele, na mesma máquina.
+const PAINEL_PORTA = Number(process.env.PAINEL_PORTA) || 3001;
+function repassarParaPainel(req, res) {
+  const ip = req.socket.remoteAddress;
+  const pedido = http.request({
+    host: '127.0.0.1', port: PAINEL_PORTA, method: req.method, path: req.url,
+    headers: {
+      ...req.headers,
+      'x-forwarded-for': req.headers['x-forwarded-for'] ? `${req.headers['x-forwarded-for']}, ${ip}` : ip,
+      'x-forwarded-proto': req.headers['x-forwarded-proto'] || 'https',
+    },
+    timeout: 15000,
+  }, (resposta) => {
+    res.writeHead(resposta.statusCode, resposta.headers);
+    resposta.pipe(res);
+  });
+  pedido.on('timeout', () => pedido.destroy(new Error('tempo esgotado')));
+  pedido.on('error', () => {
+    if (!res.headersSent) res.writeHead(502, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('A página está indisponível agora. Tente de novo em instantes.');
+  });
+  req.pipe(pedido);
+}
+
 const servidor = http.createServer((req, res) => {
+  if (req.url.startsWith('/@')) return repassarParaPainel(req, res);
+
   if (req.method !== 'GET' && req.method !== 'HEAD') {
     res.writeHead(405, { Allow: 'GET, HEAD' });
     return res.end();
